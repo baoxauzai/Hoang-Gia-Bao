@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" width="500" height="350">
+    <defs>
+      <linearGradient id="gm_00ffaa" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#00ffaa"/>
+        <stop offset="100%" stop-color="#00f0ff"/>
+      </linearGradient>
+      <filter id="glowm_00ffaa">
+        <feGaussianBlur stdDeviation="4" result="blur"/>
+        <feMerge>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
+    <rect width="500" height="350" rx="16" fill="#0d111a"/>
+    <circle cx="250" cy="165" r="110" fill="#00ffaa" opacity="0.15" filter="url(#glowm_00ffaa)"/>
+    
+    <!-- Mouse shell -->
+    <g transform="translate(195, 45)">
+      <!-- Outer body -->
+      <path d="M55,5 C95,5 110,45 110,120 C110,200 90,225 55,225 C20,225 0,200 0,120 C0,45 15,5 55,5 Z" 
+            fill="#151b26" stroke="#00ffaa" stroke-width="2.5" filter="url(#glowm_00ffaa)"/>
+      
+      <!-- Button split -->
+      <line x1="55" y1="5" x2="55" y2="85" stroke="#00ffaa" stroke-width="1.8"/>
+      
+      <!-- Scroll wheel -->
+      <rect x="49" y="30" width="12" height="30" rx="6" fill="#00f0ff" filter="url(#glowm_00ffaa)"/>
+      <line x1="55" y1="36" x2="55" y2="54" stroke="#0d111a" stroke-width="2"/>
+      
+      <!-- Side buttons -->
+      <rect x="-4" y="65" width="4" height="22" rx="2" fill="#00ffaa"/>
+      <rect x="-4" y="92" width="4" height="22" rx="2" fill="#00ffaa"/>
+      
+      
+        <!-- Honeycomb dots -->
+        <g fill="#00ffaa" opacity="0.6">
+          <circle cx="55" cy="130" r="4"/><circle cx="45" cy="140" r="4"/><circle cx="65" cy="140" r="4"/>
+          <circle cx="55" cy="150" r="4"/><circle cx="35" cy="150" r="4"/><circle cx="75" cy="150" r="4"/>
+          <circle cx="45" cy="160" r="4"/><circle cx="65" cy="160" r="4"/><circle cx="55" cy="170" r="4"/>
+        </g>
+      
+    </g>
+
+    <text x="250" y="305" font-family="'Orbitron', sans-serif" font-weight="700" font-size="16" fill="#ffffff" text-anchor="middle" letter-spacing="2">
+      GMAK NEON BLADE HONEYCOMB
+    </text>
+    <text x="250" y="325" font-family="'Rajdhani', sans-serif" font-weight="600" font-size="12" fill="#00ffaa" text-anchor="middle" letter-spacing="3">
+      GMAK ULTRA ESPORT MOUSE
+    </text>
+  </svg>

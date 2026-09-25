@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GMAK Gaming Gear - Chuột & Bàn Phím Cơ Esport Đỉnh Cao</title>
+  <meta name="description" content="GMAK Store - Chuyên bàn phím cơ custom, chuột gaming siêu nhẹ PAW3395, gear esport chuyên nghiệp hàng đầu Việt Nam.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== SITE HEADER ==================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="assets/images/logo.svg" alt="GMAK Gaming Gear Logo">
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link active">TRANG CHỦ</a>
+        <a href="products.html" class="nav-link">SẢN PHẨM</a>
+        <a href="products.html?cat=keyboard" class="nav-link">BÀN PHÍM CƠ</a>
+        <a href="products.html?cat=mouse" class="nav-link">CHUỘT GAMING</a>
+        <a href="contact.html" class="nav-link">LIÊN HỆ & SHOWROOM</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <!-- Nút mở bảng so sánh -->
+        <button class="action-btn" id="openCompareBtn" title="So sánh sản phẩm" onclick="openCompareModal()">
+          ⚖️
+          <span class="action-badge" id="compareCount">0</span>
+        </button>
+
+        <!-- Nút giỏ hàng -->
+        <button class="action-btn" id="headerCartBtn" title="Xem giỏ hàng">
+          🛒
+          <span class="action-badge cart-count-badge" id="cartCountBadge">0</span>
+        </button>
+
+        <!-- Nút Menu mobile -->
+        <button class="action-btn menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SLIDER (Y1.3) ==================== -->
+  <section class="hero-slider-section">
+    <div class="container">
+      <div class="slider-container" id="mainBannerSlider">
+        <div class="slider-wrapper">
+          <!-- Slide 1: Flash Sale -->
+          <div class="slide active">
+            <a href="#flashSaleSection" class="slide-img-link">
+              <img src="assets/images/banner-1.svg" alt="GMAK Flash Sale Gaming Gear 50%">
+            </a>
+          </div>
+          <!-- Slide 2: Rainy 75 -->
+          <div class="slide">
+            <a href="product-detail.html?id=gmak-p1" class="slide-img-link">
+              <img src="assets/images/banner-2.svg" alt="Ra mắt GMAK Rainy 75 Pro">
+            </a>
+          </div>
+          <!-- Slide 3: G4Pro Mouse -->
+          <div class="slide">
+            <a href="product-detail.html?id=gmak-p3" class="slide-img-link">
+              <img src="assets/images/banner-3.svg" alt="Chuột GMAK G4Pro Superlight 49g">
+            </a>
+          </div>
+        </div>
+
+        <!-- Slider Controls (Next / Prev / Dots) -->
+        <button class="slider-btn prev" aria-label="Previous Slide">‹</button>
+        <button class="slider-btn next" aria-label="Next Slide">›</button>
+        <div class="slider-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FLASH SALE & COUNTDOWN (Y1.6) ==================== -->
+  <section class="section" id="flashSaleSection" style="padding-top: 10px;">
+    <div class="container">
+      <div class="flash-sale-banner">
+        <div class="flash-sale-title">
+          <span class="flash-badge">⚡ FLASH SALE 24H</span>
+          <div>
+            <h2>GIỜ VÀNG SĂN GEAR ESPORT</h2>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Ưu đãi giảm giá tới 50% chỉ còn trong đợt sale này!</p>
+          </div>
+        </div>
+
+        <!-- Countdown Clock -->
+        <div class="countdown-box">
+          <div class="countdown-segment">
+            <div class="countdown-num" id="countdownDays">00</div>
+            <span class="countdown-label">Ngày</span>
+          </div>
+          <div class="countdown-colon">:</div>
+          <div class="countdown-segment">
+            <div class="countdown-num" id="countdownHours">12</div>
+            <span class="countdown-label">Giờ</span>
+          </div>
+          <div class="countdown-colon">:</div>
+          <div class="countdown-segment">
+            <div class="countdown-num" id="countdownMins">45</div>
+            <span class="countdown-label">Phút</span>
+          </div>
+          <div class="countdown-colon">:</div>
+          <div class="countdown-segment">
+            <div class="countdown-num" id="countdownSecs">30</div>
+            <span class="countdown-label">Giây</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NHÓM 1: SẢN PHẨM MỚI (Y1.2) ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">
+            <span class="title-accent">⭐</span> SẢN PHẨM MỚI RA MẮT
+          </h2>
+          <p class="section-subtitle">Đón đầu công nghệ switch thế hệ mới và mắt đọc chuẩn esport 2026</p>
+        </div>
+        <a href="products.html" class="btn btn-outline btn-sm">XEM TẤT CẢ →</a>
+      </div>
+
+      <div class="product-grid" id="gridNewProducts">
+        <!-- Render động qua JavaScript js/render.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NHÓM 2: SẢN PHẨM BÁN CHẠY (HOT) ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">
+            <span class="title-accent">🔥</span> TOP GEAR BÁN CHẠY NHẤT
+          </h2>
+          <p class="section-subtitle">Được hàng ngàn game thủ chuyên nghiệp và streamer tin dùng</p>
+        </div>
+        <a href="products.html" class="btn btn-outline btn-sm">XEM THÊM →</a>
+      </div>
+
+      <div class="product-grid" id="gridHotProducts">
+        <!-- Render động qua JavaScript js/render.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NHÓM 3: SẢN PHẨM KHUYẾN MÃI (SALE) ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">
+            <span class="title-accent">🎁</span> COMBO &amp; KHUYẾN MÃI KHỦNG
+          </h2>
+          <p class="section-subtitle">Bộ đôi gear tặng quà giá trị - Tiết kiệm tối đa chi phí build góc máy</p>
+        </div>
+        <a href="products.html" class="btn btn-outline btn-sm">SĂN DEAL →</a>
+      </div>
+
+      <div class="product-grid" id="gridSaleProducts">
+        <!-- Render động qua JavaScript js/render.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DANH MỤC TỔNG HỢP THEO TABS ==================== -->
+  <section class="section" style="background: rgba(14, 19, 29, 0.4); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); padding: 50px 0;">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">TẤT CẢ GEAR GMAK</h2>
+          <p class="section-subtitle">Chọn nhóm sản phẩm để duyệt nhanh thiết bị yêu thích</p>
+        </div>
+        
+        <div class="product-tabs">
+          <button class="tab-btn active" data-group="all">TẤT CẢ (12)</button>
+          <button class="tab-btn" data-group="moi">MỚI RA MẮT</button>
+          <button class="tab-btn" data-group="hot">BÁN CHẠY</button>
+          <button class="tab-btn" data-group="khuyenmai">KHUYẾN MÃI</button>
+        </div>
+      </div>
+
+      <div class="product-grid" id="gridFeaturedProducts">
+        <!-- Render động qua JavaScript js/render.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CAM KẾT DỊCH VỤ ==================== -->
+  <section class="section" style="padding-top: 50px;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px;">
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 24px; text-align: center;">
+          <div style="font-size: 2.2rem; margin-bottom: 10px;">🛡️</div>
+          <h4 style="font-family: var(--font-heading); color: var(--neon-cyan); margin-bottom: 6px;">BẢO HÀNH 24 THÁNG</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Cam kết 1 đổi 1 trong 30 ngày đầu tiên nếu có lỗi kỹ thuật từ nhà sản xuất.</p>
+        </div>
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 24px; text-align: center;">
+          <div style="font-size: 2.2rem; margin-bottom: 10px;">🚀</div>
+          <h4 style="font-family: var(--font-heading); color: var(--neon-cyan); margin-bottom: 6px;">GIAO NHANH HỎA TỐC</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Giao hàng trong 2 giờ tại nội thành Hà Nội &amp; TP.HCM. Miễn phí ship đơn từ 500k.</p>
+        </div>
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 24px; text-align: center;">
+          <div style="font-size: 2.2rem; margin-bottom: 10px;">⚡</div>
+          <h4 style="font-family: var(--font-heading); color: var(--neon-cyan); margin-bottom: 6px;">100% CHÍNH HÃNG</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Phân phối linh kiện switch, mạch hotswap, mắt đọc PAW3395 chuẩn esport.</p>
+        </div>
+        <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 24px; text-align: center;">
+          <div style="font-size: 2.2rem; margin-bottom: 10px;">🎧</div>
+          <h4 style="font-family: var(--font-heading); color: var(--neon-cyan); margin-bottom: 6px;">HỖ TRỢ BUILD CUSTOM</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">Tư vấn mod lube switch, cân wire stabilizer, thay lò xo theo yêu cầu game thủ.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SHOPPING CART DRAWER (Y1.5) ==================== -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3><span>🛒</span> GIỎ HÀNG GAMING</h3>
+      <button class="btn-close-drawer" id="closeCartDrawer" aria-label="Close cart">✕</button>
+    </div>
+    
+    <div class="cart-drawer-body" id="cartDrawerBody">
+      <!-- Render động các sản phẩm trong giỏ hàng -->
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-summary-row">
+        <span>Tạm tính:</span>
+        <span id="cartDrawerSubtotal">0 đ</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Phí vận chuyển:</span>
+        <span style="color: var(--neon-green);">MIỄN PHÍ</span>
+      </div>
+      <div class="cart-summary-row total">
+        <span>Tổng thanh toán:</span>
+        <span class="total-amount" id="cartDrawerTotal">0 đ</span>
+      </div>
+      <button class="btn btn-primary" style="width: 100%;" onclick="handleCheckout()">
+        TIẾN HÀNH ĐẶT HÀNG →
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== COMPARE FLOATING BAR (Tự đề xuất 2) ==================== -->
+  <div class="compare-bar" id="compareBar">
+    <div style="font-family: var(--font-heading); font-size: 0.9rem; font-weight: 700; color: #fff;">
+      SO SÁNH GEAR:
+    </div>
+    <div class="compare-slots" id="compareSlots">
+      <!-- Render các slot so sánh đã chọn -->
+    </div>
+    <div style="display: flex; gap: 8px;">
+      <button class="btn btn-primary btn-sm" onclick="openCompareModal()">
+        SO SÁNH NGAY
+      </button>
+      <button class="btn btn-outline btn-sm" onclick="clearCompareList()">
+        XÓA HẾT
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== COMPARE MODAL (Tự đề xuất 2) ==================== -->
+  <div class="modal-overlay" id="compareModal">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeCompareModal()">✕</button>
+      <div id="compareModalBody"></div>
+    </div>
+  </div>
+
+  <!-- ==================== QUICK VIEW MODAL ==================== -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-content" style="max-width: 750px;">
+      <button class="modal-close-btn" onclick="closeQuickView()">✕</button>
+      <div id="quickViewBody"></div>
+    </div>
+  </div>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="assets/images/logo.svg" alt="GMAK" style="height: 40px; margin-bottom: 16px;">
+          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px;">
+            GMAK Gaming Gear - Thương hiệu bàn phím cơ custom &amp; chuột gaming không dây siêu nhẹ hàng đầu cho game thủ và streamer Việt Nam.
+          </p>
+          <div style="color: var(--neon-cyan); font-weight: 700; font-family: var(--font-tech);">
+            HOTLINE: 1900 6868 (8:00 - 22:00)
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>VỀ GMAK GEAR</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Giới thiệu GMAK</a></li>
+            <li><a href="products.html">Hệ sinh thái sản phẩm</a></li>
+            <li><a href="contact.html">Hệ thống showroom</a></li>
+            <li><a href="contact.html">Tuyển dụng tester</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>CHÍNH SÁCH</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Chính sách bảo hành 24T</a></li>
+            <li><a href="contact.html">Chính sách đổi trả 30 ngày</a></li>
+            <li><a href="contact.html">Vận chuyển &amp; Giao nhận</a></li>
+            <li><a href="contact.html">Hướng dẫn mod phím</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>ĐĂNG KÝ NHẬN DEAL</h4>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 12px;">
+            Nhận ngay voucher 100k cho đơn hàng đầu tiên và thông báo mở bán các mẫu switch giới hạn.
+          </p>
+          <form class="validate-form" style="display: flex; gap: 8px;">
+            <input type="email" placeholder="Nhập email của bạn..." required class="form-control" style="font-size: 0.85rem; padding: 8px 12px;">
+            <button type="submit" class="btn btn-primary btn-sm">GỬI</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 GMAK Gaming Gear. Bài tập Assignment - Lập trình cơ sở với JavaScript (FPT Polytechnic).</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Tổ chức chuẩn Y2 (Đặt trong js/) -->
+  <script src="js/data.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/form-validate.js"></script>
+  <script src="js/advanced.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

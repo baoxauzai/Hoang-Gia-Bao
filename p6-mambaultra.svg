@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" width="500" height="350">
+    <defs>
+      <linearGradient id="gm_00ff66" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#00ff66"/>
+        <stop offset="100%" stop-color="#00f0ff"/>
+      </linearGradient>
+      <filter id="glowm_00ff66">
+        <feGaussianBlur stdDeviation="4" result="blur"/>
+        <feMerge>
+          <feMergeNode in="blur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
+    <rect width="500" height="350" rx="16" fill="#0d111a"/>
+    <circle cx="250" cy="165" r="110" fill="#00ff66" opacity="0.15" filter="url(#glowm_00ff66)"/>
+    
+    <!-- Mouse shell -->
+    <g transform="translate(195, 45)">
+      <!-- Outer body -->
+      <path d="M55,5 C95,5 110,45 110,120 C110,200 90,225 55,225 C20,225 0,200 0,120 C0,45 15,5 55,5 Z" 
+            fill="#151b26" stroke="#00ff66" stroke-width="2.5" filter="url(#glowm_00ff66)"/>
+      
+      <!-- Button split -->
+      <line x1="55" y1="5" x2="55" y2="85" stroke="#00ff66" stroke-width="1.8"/>
+      
+      <!-- Scroll wheel -->
+      <rect x="49" y="30" width="12" height="30" rx="6" fill="#00f0ff" filter="url(#glowm_00ff66)"/>
+      <line x1="55" y1="36" x2="55" y2="54" stroke="#0d111a" stroke-width="2"/>
+      
+      <!-- Side buttons -->
+      <rect x="-4" y="65" width="4" height="22" rx="2" fill="#00ff66"/>
+      <rect x="-4" y="92" width="4" height="22" rx="2" fill="#00ff66"/>
+      
+      
+        <!-- RGB Tail curve -->
+        <path d="M25,160 Q55,200 85,160" fill="none" stroke="url(#gm_00ff66)" stroke-width="3" filter="url(#glowm_00ff66)"/>
+        <polygon points="50,140 60,140 55,152" fill="#00f0ff"/>
+      
+    </g>
+
+    <text x="250" y="305" font-family="'Orbitron', sans-serif" font-weight="700" font-size="16" fill="#ffffff" text-anchor="middle" letter-spacing="2">
+      GMAK MAMBA ULTRA 8K
+    </text>
+    <text x="250" y="325" font-family="'Rajdhani', sans-serif" font-weight="600" font-size="12" fill="#00ff66" text-anchor="middle" letter-spacing="3">
+      GMAK ULTRA ESPORT MOUSE
+    </text>
+  </svg>

@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 450" width="1200" height="450">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07121e"/>
+      <stop offset="60%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#1b263b"/>
+    </linearGradient>
+    <linearGradient id="cyanBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f0ff"/>
+      <stop offset="100%" stop-color="#0080ff"/>
+    </linearGradient>
+    <filter id="glow2">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="450" fill="url(#bgGrad2)"/>
+  <circle cx="850" cy="225" r="220" fill="#00f0ff" opacity="0.15" filter="url(#glow2)"/>
+  
+  <!-- Cyber Hexagons -->
+  <g stroke="#00f0ff" stroke-opacity="0.1" fill="none" stroke-width="2">
+    <polygon points="900,100 950,130 950,190 900,220 850,190 850,130"/>
+    <polygon points="1020,170 1070,200 1070,260 1020,290 970,260 970,200"/>
+    <polygon points="800,240 850,270 850,330 800,360 750,330 750,270"/>
+  </g>
+  
+  <!-- Stylized Rainy 75 Keyboard Art -->
+  <g transform="translate(680, 110)">
+    <rect x="0" y="30" width="460" height="200" rx="16" fill="#131e2e" stroke="#00f0ff" stroke-width="3" filter="url(#glow2)"/>
+    <rect x="15" y="45" width="430" height="170" rx="10" fill="#0a101a"/>
+    <!-- Keys Grid -->
+    <g fill="#1f2d42" stroke="#00f0ff" stroke-width="0.5">
+      <!-- F row -->
+      <rect x="25" y="55" width="22" height="18" rx="3" fill="#00f0ff" opacity="0.9"/>
+      <rect x="52" y="55" width="22" height="18" rx="3"/>
+      <rect x="79" y="55" width="22" height="18" rx="3"/>
+      <rect x="106" y="55" width="22" height="18" rx="3"/>
+      <rect x="140" y="55" width="22" height="18" rx="3"/>
+      <rect x="167" y="55" width="22" height="18" rx="3"/>
+      <rect x="194" y="55" width="22" height="18" rx="3"/>
+      <rect x="221" y="55" width="22" height="18" rx="3"/>
+      <rect x="255" y="55" width="22" height="18" rx="3"/>
+      <rect x="282" y="55" width="22" height="18" rx="3"/>
+      <rect x="309" y="55" width="22" height="18" rx="3"/>
+      <rect x="336" y="55" width="22" height="18" rx="3"/>
+      <rect x="375" y="55" width="30" height="18" rx="3" fill="#ff0055"/>
+      <circle cx="423" cy="64" r="9" fill="#00f0ff" filter="url(#glow2)"/> <!-- Knob -->
+
+      <!-- Main typing block -->
+      <rect x="25" y="80" width="25" height="22" rx="3"/>
+      <rect x="55" y="80" width="22" height="22" rx="3"/>
+      <rect x="82" y="80" width="22" height="22" rx="3"/>
+      <rect x="109" y="80" width="22" height="22" rx="3"/>
+      <rect x="136" y="80" width="22" height="22" rx="3"/>
+      <rect x="163" y="80" width="22" height="22" rx="3"/>
+      <rect x="190" y="80" width="22" height="22" rx="3"/>
+      <rect x="217" y="80" width="22" height="22" rx="3"/>
+      <rect x="244" y="80" width="22" height="22" rx="3"/>
+      <rect x="271" y="80" width="22" height="22" rx="3"/>
+      <rect x="298" y="80" width="22" height="22" rx="3"/>
+      <rect x="325" y="80" width="22" height="22" rx="3"/>
+      <rect x="352" y="80" width="40" height="22" rx="3"/>
+      <rect x="402" y="80" width="30" height="22" rx="3"/>
+
+      <!-- Space bar row -->
+      <rect x="25" y="166" width="35" height="24" rx="3"/>
+      <rect x="65" y="166" width="30" height="24" rx="3"/>
+      <rect x="100" y="166" width="30" height="24" rx="3"/>
+      <rect x="135" y="166" width="160" height="24" rx="4" fill="#00f0ff" opacity="0.6"/>
+      <rect x="300" y="166" width="28" height="24" rx="3"/>
+      <rect x="333" y="166" width="25" height="24" rx="3"/>
+      <rect x="363" y="166" width="25" height="24" rx="3"/>
+      <rect x="393" y="166" width="25" height="24" rx="3"/>
+    </g>
+  </g>
+  
+  <g transform="translate(80, 110)">
+    <rect x="0" y="0" width="165" height="34" rx="17" fill="#00f0ff" opacity="0.2"/>
+    <text x="15" y="23" font-family="'Orbitron', sans-serif" font-weight="700" font-size="14" fill="#00f0ff" letter-spacing="2">
+      ⭐ SẢN PHẨM MỚI
+    </text>
+    <text x="0" y="85" font-family="'Orbitron', sans-serif" font-weight="900" font-size="50" fill="#ffffff">
+      GMAK RAINY 75 PRO
+    </text>
+    <text x="0" y="135" font-family="'Orbitron', sans-serif" font-weight="800" font-size="34" fill="url(#cyanBlue)">
+      NHÔM NGUYÊN KHỐI CNC
+    </text>
+    <text x="0" y="180" font-family="'Inter', sans-serif" font-weight="400" font-size="18" fill="#94a3b8">
+      Cấu trúc Gasket Mount cực êm, Switch HMX Violet, Pin 7000mAh 3-Mode
+    </text>
+    
+    <g transform="translate(0, 220)">
+      <rect x="0" y="0" width="230" height="52" rx="8" fill="url(#cyanBlue)" filter="url(#glow2)"/>
+      <text x="35" y="33" font-family="'Orbitron', sans-serif" font-weight="800" font-size="16" fill="#07121e" letter-spacing="1">
+        KHÁM PHÁ NGAY →
+      </text>
+    </g>
+  </g>
+</svg>

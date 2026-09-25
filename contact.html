@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên Hệ & Hệ Thống Showroom - GMAK Gaming Gear</title>
+  <meta name="description" content="Liên hệ GMAK Store - Hệ thống showroom trải nghiệm bàn phím cơ và chuột gaming tại Hà Nội và TP.HCM.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== SITE HEADER ==================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="assets/images/logo.svg" alt="GMAK Gaming Gear Logo">
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">TRANG CHỦ</a>
+        <a href="products.html" class="nav-link">SẢN PHẨM</a>
+        <a href="products.html?cat=keyboard" class="nav-link">BÀN PHÍM CƠ</a>
+        <a href="products.html?cat=mouse" class="nav-link">CHUỘT GAMING</a>
+        <a href="contact.html" class="nav-link active">LIÊN HỆ & SHOWROOM</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn" title="So sánh sản phẩm" onclick="openCompareModal()">
+          ⚖️
+          <span class="action-badge" id="compareCount">0</span>
+        </button>
+
+        <button class="action-btn" id="headerCartBtn" title="Xem giỏ hàng">
+          🛒
+          <span class="action-badge cart-count-badge">0</span>
+        </button>
+
+        <button class="action-btn menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== BREADCRUMB ==================== -->
+  <div style="background: rgba(14, 19, 29, 0.6); border-bottom: 1px solid var(--border-subtle); padding: 14px 0;">
+    <div class="container" style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-tech);">
+      <a href="index.html" style="color: var(--neon-cyan);">TRANG CHỦ</a>
+      <span style="margin: 0 8px;">/</span>
+      <span style="color: var(--text-primary); font-weight: 700;">LIÊN HỆ & SHOWROOM</span>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN CONTACT & SHOWROOM CONTENT ==================== -->
+  <main class="container">
+    <div class="contact-layout">
+      <!-- CỘT TRÁI: FORM LIÊN HỆ CÓ VALIDATION (Y1.4) -->
+      <section class="contact-card">
+        <h2 style="font-family: var(--font-heading); color: var(--neon-cyan); font-size: 1.4rem; margin-bottom: 8px;">
+          GỬI TIN NHẮN TƯ VẤN
+        </h2>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 24px;">
+          Đội ngũ kỹ thuật viên GMAK sẵn sàng tư vấn mod phím cơ, chọn loại switch phù hợp và hỗ trợ bảo hành.
+        </p>
+
+        <form class="validate-form" id="contactForm">
+          <!-- Họ tên -->
+          <div class="form-group">
+            <label class="form-label" for="contactName">HỌ VÀ TÊN *</label>
+            <input type="text" id="contactName" name="name" class="form-control" placeholder="Nguyễn Văn A" required minlength="3">
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label class="form-label" for="contactEmail">ĐỊA CHỈ EMAIL *</label>
+            <input type="email" id="contactEmail" name="email" class="form-control" placeholder="gamer@gmail.com" required>
+          </div>
+
+          <!-- Số điện thoại -->
+          <div class="form-group">
+            <label class="form-label" for="contactPhone">SỐ ĐIỆN THOẠI (10 SỐ VN) *</label>
+            <input type="tel" id="contactPhone" name="phone" class="form-control" placeholder="0912345678" required>
+          </div>
+
+          <!-- Nhu cầu -->
+          <div class="form-group">
+            <label class="form-label" for="contactTopic">NHU CẦU HỖ TRỢ</label>
+            <select id="contactTopic" name="topic" class="form-control">
+              <option value="tuvan">Tư vấn chọn chuột / bàn phím chơi game</option>
+              <option value="baohanh">Hỗ trợ bảo hành kỹ thuật 24 tháng</option>
+              <option value="custom">Dịch vụ Mod bàn phím cơ & Lube switch</option>
+              <option value="cyber">Báo giá trang bị phòng máy Cyber Game Esport</option>
+            </select>
+          </div>
+
+          <!-- Nội dung -->
+          <div class="form-group">
+            <label class="form-label" for="contactMessage">NỘI DUNG YÊU CẦU *</label>
+            <textarea id="contactMessage" name="message" class="form-control" rows="4" placeholder="Nhập câu hỏi hoặc yêu cầu cụ thể của bạn..." required minlength="10"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            GỬI YÊU CẦU CHO GMAK →
+          </button>
+        </form>
+      </section>
+
+      <!-- CỘT PHẢI: HỆ THỐNG SHOWROOM & GEOLOCATION (Y1.6) -->
+      <section class="showroom-box">
+        <h2 style="font-family: var(--font-heading); color: #fff; font-size: 1.4rem; margin-bottom: 8px;">
+          HỆ THỐNG SHOWROOM TRẢI NGHIỆM
+        </h2>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">
+          Trải nghiệm thực tế cảm giác gõ switch, test mắt đọc PAW3395 trực tiếp tại các showroom GMAK.
+        </p>
+
+        <!-- Tính năng Geolocation (Y1.6) -->
+        <button class="btn btn-outline" id="btnFindShowroom" style="width: 100%; margin-bottom: 16px;">
+          📍 TÌM SHOWROOM GẦN BẠN NHẤT (GPS)
+        </button>
+        <div id="geoResultBox"></div>
+
+        <!-- Danh sách Showroom -->
+        <div class="showroom-list">
+          <div class="showroom-item">
+            <h4>SHOWROOM 1: HÀ NỘI FLAGSHIP</h4>
+            <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 4px;">
+              📍 Số 68 Đường Cầu Giấy, Q. Cầu Giấy, TP. Hà Nội
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.82rem;">
+              ⏰ Giờ mở cửa: 08:30 - 21:30 (Cả thứ 7 &amp; CN)
+            </p>
+            <p style="color: var(--neon-cyan); font-weight: 700; font-size: 0.85rem; margin-top: 4px;">
+              📞 Hotline: 1900 6868 - Ext 1
+            </p>
+          </div>
+
+          <div class="showroom-item">
+            <h4>SHOWROOM 2: TP. HỒ CHÍ MINH ESPORT HUB</h4>
+            <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 4px;">
+              📍 Số 135 Nguyễn Thị Minh Khai, P. Bến Thành, Quận 1, TP.HCM
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.82rem;">
+              ⏰ Giờ mở cửa: 08:30 - 22:00 (Cả thứ 7 &amp; CN)
+            </p>
+            <p style="color: var(--neon-cyan); font-weight: 700; font-size: 0.85rem; margin-top: 4px;">
+              📞 Hotline: 1900 8686 - Ext 2
+            </p>
+          </div>
+
+          <div class="showroom-item" style="border-left: 3px solid var(--neon-pink);">
+            <h4 style="color: var(--neon-pink);">TRUNG TÂM BẢO HÀNH TOÀN QUỐC</h4>
+            <p style="color: var(--text-secondary); font-size: 0.88rem;">
+              Tiếp nhận sản phẩm bảo hành chính hãng và hỗ trợ kỹ thuật firmware 24/7 qua tổng đài hỗ trợ.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ==================== SHOPPING CART DRAWER ==================== -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3><span>🛒</span> GIỎ HÀNG GAMING</h3>
+      <button class="btn-close-drawer" id="closeCartDrawer">✕</button>
+    </div>
+    <div class="cart-drawer-body" id="cartDrawerBody"></div>
+    <div class="cart-drawer-footer">
+      <div class="cart-summary-row total">
+        <span>Tổng thanh toán:</span>
+        <span class="total-amount" id="cartDrawerTotal">0 đ</span>
+      </div>
+      <button class="btn btn-primary" style="width: 100%;" onclick="handleCheckout()">
+        TIẾN HÀNH ĐẶT HÀNG →
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== COMPARE FLOATING BAR ==================== -->
+  <div class="compare-bar" id="compareBar">
+    <div style="font-family: var(--font-heading); font-size: 0.9rem; font-weight: 700; color: #fff;">
+      SO SÁNH GEAR:
+    </div>
+    <div class="compare-slots" id="compareSlots"></div>
+    <div style="display: flex; gap: 8px;">
+      <button class="btn btn-primary btn-sm" onclick="openCompareModal()">
+        SO SÁNH NGAY
+      </button>
+      <button class="btn btn-outline btn-sm" onclick="clearCompareList()">
+        XÓA HẾT
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== COMPARE MODAL ==================== -->
+  <div class="modal-overlay" id="compareModal">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeCompareModal()">✕</button>
+      <div id="compareModalBody"></div>
+    </div>
+  </div>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>© 2026 GMAK Gaming Gear. Bài tập Assignment - Lập trình cơ sở với JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/form-validate.js"></script>
+  <script src="js/advanced.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

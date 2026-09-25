@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danh Mục Sản Phẩm Gaming Gear - GMAK Store</title>
+  <meta name="description" content="Danh mục bàn phím cơ và chuột gaming GMAK. Bộ lọc theo switch, cảm biến DPI, kết nối có dây/không dây.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== SITE HEADER ==================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="assets/images/logo.svg" alt="GMAK Gaming Gear Logo">
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">TRANG CHỦ</a>
+        <a href="products.html" class="nav-link active">SẢN PHẨM</a>
+        <a href="products.html?cat=keyboard" class="nav-link">BÀN PHÍM CƠ</a>
+        <a href="products.html?cat=mouse" class="nav-link">CHUỘT GAMING</a>
+        <a href="contact.html" class="nav-link">LIÊN HỆ & SHOWROOM</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn" title="So sánh sản phẩm" onclick="openCompareModal()">
+          ⚖️
+          <span class="action-badge" id="compareCount">0</span>
+        </button>
+
+        <button class="action-btn" id="headerCartBtn" title="Xem giỏ hàng">
+          🛒
+          <span class="action-badge cart-count-badge">0</span>
+        </button>
+
+        <button class="action-btn menu-toggle" id="menuToggle" aria-label="Toggle menu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== BREADCRUMB ==================== -->
+  <div style="background: rgba(14, 19, 29, 0.6); border-bottom: 1px solid var(--border-subtle); padding: 14px 0;">
+    <div class="container" style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-tech);">
+      <a href="index.html" style="color: var(--neon-cyan);">TRANG CHỦ</a>
+      <span style="margin: 0 8px;">/</span>
+      <span style="color: var(--text-primary); font-weight: 700;">HỆ SINH THÁI GEAR GMAK</span>
+    </div>
+  </div>
+
+  <!-- ==================== CATALOG MAIN CONTENT ==================== -->
+  <main class="container">
+    <div class="catalog-layout">
+      <!-- SIDEBAR BỘ LỌC (Tự đề xuất 1 - Prompt 7) -->
+      <aside class="filter-sidebar">
+        <div class="filter-header">
+          <h3>BỘ LỌC THÔNG SỐ</h3>
+          <button class="btn-reset-filter" id="resetFiltersBtn">ĐẶT LẠI</button>
+        </div>
+
+        <!-- 1. Danh mục thiết bị -->
+        <div class="filter-group">
+          <h4 class="filter-title">DÒNG THIẾT BỊ</h4>
+          <div class="filter-options">
+            <label class="custom-checkbox">
+              <input type="radio" name="categoryFilter" value="all" checked>
+              <span>Tất cả thiết bị</span>
+            </label>
+            <label class="custom-checkbox">
+              <input type="radio" name="categoryFilter" value="keyboard">
+              <span>Bàn phím cơ (Keyboard)</span>
+            </label>
+            <label class="custom-checkbox">
+              <input type="radio" name="categoryFilter" value="mouse">
+              <span>Chuột gaming (Mouse)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- 2. Loại kết nối -->
+        <div class="filter-group">
+          <h4 class="filter-title">KIỂU KẾT NỐI</h4>
+          <div class="filter-options">
+            <label class="custom-checkbox">
+              <input type="radio" name="connectionFilter" value="all" checked>
+              <span>Tất cả kết nối</span>
+            </label>
+            <label class="custom-checkbox">
+              <input type="radio" name="connectionFilter" value="wireless">
+              <span>Không dây (Wireless / 3-Mode)</span>
+            </label>
+            <label class="custom-checkbox">
+              <input type="radio" name="connectionFilter" value="wired">
+              <span>Có dây (USB / Type-C)</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- 3. Khoảng giá -->
+        <div class="filter-group">
+          <h4 class="filter-title">MỨC GIÁ</h4>
+          <div class="filter-options">
+            <label class="custom-checkbox">
+              <input type="radio" name="priceFilter" value="all" checked>
+              <span>Tất cả mức giá</span>
+            </label>
+            <label class="custom-checkbox">
+              <input type="radio" name="priceFilter" value="under-1m">
+              <span>Dưới 1.000.000 đ</span>
+            </label>
+            <label class="custom-checkbox">
+              <input type="radio" name="priceFilter" value="1m-2m">
+              <span>Từ 1.000.000 - 2.000.000 đ</span>
+            </label>
+            <label class="custom-checkbox">
+              <input type="radio" name="priceFilter" value="over-2m">
+              <span>Trên 2.000.000 đ</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Khung hỗ trợ kỹ thuật -->
+        <div style="background: rgba(0, 240, 255, 0.05); border: 1px dashed var(--border-neon); border-radius: 6px; padding: 16px; margin-top: 20px;">
+          <h5 style="font-family: var(--font-heading); color: var(--neon-cyan); font-size: 0.85rem; margin-bottom: 6px;">CẦN TƯ VẤN SWITCH?</h5>
+          <p style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.4; margin-bottom: 10px;">
+            Liên hệ chuyên viên GMAK để được test sound và chọn lực nhấn switch phù hợp nhất.
+          </p>
+          <a href="contact.html" class="btn btn-outline btn-sm" style="width: 100%;">CHAT KỸ THUẬT</a>
+        </div>
+      </aside>
+
+      <!-- CATALOG RIGHT CONTENT: TOOLBAR & PRODUCT GRID -->
+      <section class="catalog-content">
+        <!-- Toolbar: Search & Sort -->
+        <div class="catalog-toolbar">
+          <div class="search-box-wrap">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="catalogSearch" class="search-input" placeholder="Tìm kiếm theo tên, switch, DPI, cảm biến...">
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <span id="catalogProductCount" style="font-size: 0.85rem; color: var(--text-muted); font-family: var(--font-tech);">
+              Đang tải sản phẩm...
+            </span>
+
+            <select id="catalogSort" class="sort-select">
+              <option value="default">Sắp xếp: Mặc định</option>
+              <option value="price-asc">Giá: Thấp đến Cao</option>
+              <option value="price-desc">Giá: Cao đến Thấp</option>
+              <option value="rating">Đánh giá sao cao nhất</option>
+              <option value="name-az">Tên: A - Z</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="product-grid" id="catalogProductsGrid">
+          <!-- Render động danh sách sản phẩm qua JavaScript -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- ==================== SHOPPING CART DRAWER ==================== -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3><span>🛒</span> GIỎ HÀNG GAMING</h3>
+      <button class="btn-close-drawer" id="closeCartDrawer">✕</button>
+    </div>
+    
+    <div class="cart-drawer-body" id="cartDrawerBody"></div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-summary-row total">
+        <span>Tổng thanh toán:</span>
+        <span class="total-amount" id="cartDrawerTotal">0 đ</span>
+      </div>
+      <button class="btn btn-primary" style="width: 100%;" onclick="handleCheckout()">
+        TIẾN HÀNH ĐẶT HÀNG →
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== COMPARE FLOATING BAR ==================== -->
+  <div class="compare-bar" id="compareBar">
+    <div style="font-family: var(--font-heading); font-size: 0.9rem; font-weight: 700; color: #fff;">
+      SO SÁNH GEAR:
+    </div>
+    <div class="compare-slots" id="compareSlots"></div>
+    <div style="display: flex; gap: 8px;">
+      <button class="btn btn-primary btn-sm" onclick="openCompareModal()">
+        SO SÁNH NGAY
+      </button>
+      <button class="btn btn-outline btn-sm" onclick="clearCompareList()">
+        XÓA HẾT
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== COMPARE MODAL ==================== -->
+  <div class="modal-overlay" id="compareModal">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeCompareModal()">✕</button>
+      <div id="compareModalBody"></div>
+    </div>
+  </div>
+
+  <!-- ==================== QUICK VIEW MODAL ==================== -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-content" style="max-width: 750px;">
+      <button class="modal-close-btn" onclick="closeQuickView()">✕</button>
+      <div id="quickViewBody"></div>
+    </div>
+  </div>
+
+  <!-- ==================== SITE FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>© 2026 GMAK Gaming Gear. Bài tập Assignment - Lập trình cơ sở với JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/form-validate.js"></script>
+  <script src="js/advanced.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
